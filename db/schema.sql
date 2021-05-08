@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS snakchat_db;
+
+CREATE DATABASE snakchat_db;
