@@ -85,8 +85,11 @@ Deployed Application: [https://lit-anchorage-48237.herokuapp.com/](https://lit-a
 ## Contact
 
 Kyle Ryan - rookoyole@gmail.com
+
 Maribel Ellison - maribel.duron86@gmail.com
+
 Hunter Montano - montano.hu.s@gmail.com
+
 Thomas Kubant - thomaskubant@gmail.com
 
 Template from: https://github.com/othneildrew/Best-README-Template/blob/master/README.md
