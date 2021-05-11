@@ -10,7 +10,11 @@
       <label for="post-url">Link</label>
       <input id="post-url" name="post-url" />
     </div>
-    <button type="submit" class="btn">Create</button>
+    <div>
+      <label for="post-image">Upload Image</label>
+      <input id="post-image" name="post-image" type="file">
+    </div>
+    <button type="submit" class="btn" id="submitBtn">Create</button>
   </form>
 </section>
 
@@ -28,4 +32,6 @@
 </section>
 {{/if}}
 
+<script src="/javascript/require.js"></script>
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/upload-image.js"></script>

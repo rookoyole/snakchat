@@ -30,7 +30,17 @@ class Post extends Model {
         ]
       });
     });
+  };
+  static upload(post_img) {
+    cloudinary.config({ 
+      cloud_name: 'dnq8lv71z', 
+      api_key: '988445756873736', 
+      api_secret: 'B9X2cFI9AE_NqvViWvb4Peb6SfE' 
+    });
+    cloudinary.v2.uploader.upload(post_img,  function(error, result) {console.log(result, error)});
+    console.log(post_img + " has been uploaded to cloudinary.")
   }
+
 }
 
 // create fields/columns for Post model
@@ -52,6 +62,10 @@ Post.init(
       validate: {
         isURL: true
       }
+    },
+    post_img: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     user_id: {
       type: DataTypes.INTEGER,
