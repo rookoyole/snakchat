@@ -17,7 +17,7 @@
     <header>
       <h1 class="logo">
         <img src="/images/logo.jpg"/>
-        <b href="/">SnakChat</b>
+        <a href="/">SnakChat</a>
       </h1>
       <div class="topnav">
         <div class="search-container">
@@ -30,14 +30,14 @@
       <nav>
         <h2 class="logo">
         {{#if loggedIn}}
-        <c href="/dashboard">dashboard</c>
-        <button id="logout" class="btn-no-style">logout</button>
+        <a class="dashboardText" href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style navText">logout</button>
         {{else}}
-        <c href="/candy">candy</c>
-        <c href="/chips">chips</c>
-        <c href="/icecream">ice cream</c>
-        <c href="/cereal">cereal</c>
-        <c href="/login">login</c>
+        <a class="navText" href="/candy">candy</a>
+        <a class="navText" href="/chips">chips</a>
+        <a class="navText" href="/icecream">ice cream</a>
+        <a class="navText" href="/cereal">cereal</a>
+        <a class="navText" href="/login">login</a>
         {{/if}}
         </h2>
       </nav>

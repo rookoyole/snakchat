@@ -47,17 +47,18 @@ a:hover {
   color: gray;
 }
 
-b {
+.navText {
   text-decoration: none;
-  color: #000000;
+  color: #000000!important;
   font-weight: bold;
   font-family: 'Yanone Kaffeesatz';
   transition: color .1s;
   font-size: 1em;
+  margin-left: 15px;
 }
 
-b:hover {
-  color: gray;
+.navText:hover {
+  color: gray!important;
 }
 
 .logo img {
@@ -68,7 +69,7 @@ b:hover {
   margin: 10px;
 }
 
-c {
+.dashboardText {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
@@ -78,7 +79,7 @@ c {
   margin: 30px;
 }
 
-c:hover {
+.dashboardText:hover {
   color: gray;
 }
 
