@@ -2,6 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
+const cloudinary = require('cloudinary');
 
 // get all users
 router.get('/', (req, res) => {
@@ -12,6 +13,7 @@ router.get('/', (req, res) => {
       'post_url',
       'title',
       'created_at',
+      'post_img',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
@@ -46,6 +48,7 @@ router.get('/:id', (req, res) => {
       'post_url',
       'title',
       'created_at',
+      'post_img'
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
@@ -77,7 +80,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+  Post.upload(req.body.post_img);
   Post.create({
     title: req.body.title,
     post_url: req.body.post_url,

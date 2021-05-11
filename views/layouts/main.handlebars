@@ -4,30 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snakchat</title>
+
+  <title>SnakChat</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Yanone+Kaffeesatz:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">Snakchat</a>
+      <h1 class="logo">
+        <img src="/images/logo.jpg"/>
+        <b href="/">SnakChat</b>
       </h1>
+      <div class="topnav">
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
       <nav>
+        <h2 class="logo">
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
+        <c href="/dashboard">dashboard</c>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <c href="/candy">candy</c>
+        <c href="/chips">chips</c>
+        <c href="/icecream">ice cream</c>
+        <c href="/cereal">cereal</c>
+        <c href="/login">login</c>
         {{/if}}
+        </h2>
       </nav>
     </header>
+    <section class="hero">
+      <img src="/images/banner.jpg"/>
+    </section>
     <main>
+
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      Thanks for taking a snack break with us!
     </footer>
   </div>
   
