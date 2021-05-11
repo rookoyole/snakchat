@@ -14,20 +14,24 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">Snakchat</a>
+      <h1 class="nav">
+        <img src="/images/logo.jpg"/>
+        <b href="/">Snakchat</b>
       </h1>
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
+        <b href="/dashboard">dashboard</b>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <b href="/login">login</b>
         {{/if}}
       </nav>
     </header>
+    <section class="hero">
+      <img src="/images/banner.jpg"/>
+    </section>
     <main>
-      <img src="../public/images/banner.jpg">
+
       {{{ body }}}
     </main>
     <footer>
