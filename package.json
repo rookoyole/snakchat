@@ -1,10 +1,11 @@
 {
   "name": "snakchat",
   "version": "1.0.0",
-  "description": "",
+  "description": "<!--\r *** Thanks for checking out the Best-README-Template. If you have a suggestion\r *** that would make this better, please fork the repo and create a pull request\r *** or simply open an issue with the tag \"enhancement\".\r *** Thanks again! Now go create something AMAZING! :D\r ***\r ***\r ***\r *** To avoid retyping too much info. Do a search and replace for the following:\r *** github_username, repo_name, twitter_handle, email, project_title, project_description\r -->",
   "main": "server.js",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cloudinary": "^1.25.1",
     "connect-session-sequelize": "^7.1.1",
     "consolidate": "^0.16.0",
     "dotenv": "^9.0.0",
