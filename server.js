@@ -2,7 +2,6 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const mustacheExpress = require('mustache-express');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -26,12 +25,8 @@ const helpers = require('./utils/helpers');
 
 const hbs = exphbs.create({ helpers });
 
-app.engine('mustache', mustacheExpress());
-app.use(express.static('public'));
-app.set('view engine', 'mustache');
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('views', './views');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
