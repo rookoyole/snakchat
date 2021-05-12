@@ -134,6 +134,21 @@ a:hover {
   background: #ccc;
 }
 
+.post {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image img{
+
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
 button {
   background-color: #225ca3;
   border: 0;
