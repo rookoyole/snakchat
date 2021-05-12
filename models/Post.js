@@ -17,6 +17,7 @@ class Post extends Model {
           'post_url',
           'title',
           'created_at',
+          'post_img'
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         include: [
@@ -32,16 +33,6 @@ class Post extends Model {
       });
     });
   };
-  static upload(post_img) {
-    cloudinary.config({ 
-      cloud_name: 'dnq8lv71z', 
-      api_key: '988445756873736', 
-      api_secret: 'B9X2cFI9AE_NqvViWvb4Peb6SfE' 
-    });
-    cloudinary.v2.uploader.upload(post_img,  function(error, result) {console.log(result, error)});
-    console.log(post_img + " has been uploaded to cloudinary.")
-  }
-
 }
 
 // create fields/columns for Post model
@@ -59,7 +50,7 @@ Post.init(
     },
     post_url: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         isURL: true
       }
@@ -67,6 +58,14 @@ Post.init(
     post_img: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    post_description: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: true
     },
     user_id: {
       type: DataTypes.INTEGER,
