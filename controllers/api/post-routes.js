@@ -84,7 +84,7 @@ router.post('/', withAuth, (req, res) => {
     title: req.body.title,
     post_url: req.body.post_url,
     user_id: req.session.user_id,
-    post_img: req.body.img
+    post_img: req.body.post_img
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
