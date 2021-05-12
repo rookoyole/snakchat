@@ -276,6 +276,11 @@ main {
   background-color: #1f9c13;
 }
 
+.description {
+  width: 50vw;
+  justify-self: right;
+}
+
 .comment-form {
   margin-bottom: 5%;
 }
