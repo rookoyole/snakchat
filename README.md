@@ -69,10 +69,16 @@
 
 [![Product Name Screen Shot][product-screenshot]](public/images/screenshot.png)
 <br />
-The purpose of this project was to create a full-stack site for a snack blog, including a SQL database, secure login, interactive UI and launched on Heroku.
+SnakChat aims to connect rare brand snacks, limited edition snack flavors, and exclusive snack releases with the people that love them!
+
+The motivation behind SnakChat centers around snack lovers, casual snacker interest, and most importantly; where to buy these tasty treats.
+
+The purpose of this project was to create a full-stack site for a snack blog, including an interactive UI and launched on Heroku.
 
 Features:
-* XXX
+* Image hosting on Cloudinary
+* User dashboard when logged in, allowing the user to add, edit and delete blog posts
+* Utilizes an SQL database and secure login using environmental variables
 
 <!-- PROJECT LINKS -->
 ## Project Links
@@ -87,8 +93,6 @@ Deployed Application: [https://lit-anchorage-48237.herokuapp.com/](https://lit-a
 Kyle Ryan - rookoyole@gmail.com
 
 Maribel Ellison - maribel.duron86@gmail.com
-
-Hunter Montano - montano.hu.s@gmail.com
 
 Thomas Kubant - thomaskubant@gmail.com
 
